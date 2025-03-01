@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI on Edge Real-time Disaster Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI on Edge Real-time Disaster Management System</h1>
+        <div class="controls">
+            <button id="mapBtn" class="btn map-btn">Map</button>
+            <button id="coordinateBtn" class="btn coordinate-btn">Coordinate</button>
+            <button id="manualModeBtn" class="btn manual-mode-btn">Manual Mode</button>
+            <button id="autoModeBtn" class="btn auto-mode-btn">Auto Mode</button>
+            <button id="manualTakeoffBtn" class="btn manual-takeoff-btn">Manual Take off</button>
+            <button id="manualLandBtn" class="btn manual-land-btn">Manual Land</button>
+        </div>
+        <div class="map-container">
+            <div id="gridMap" class="grid-map"></div>
+            <div class="caption">Number of survivors detected within different cells</div>
+        </div>
+        <div class="drone-status">
+            <p><span class="drone1-text">D1 loc</span> <span id="drone1Location"></span></p>
+            <p><span class="drone2-text">D2 loc</span> <span id="drone2Location"></span></p>
+        </div>
+        <hr class="footer-line">
+        <footer>IIT Bhilai</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
