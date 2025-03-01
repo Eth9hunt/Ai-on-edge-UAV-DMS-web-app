@@ -1,10 +1,26 @@
+# AI on Edge Real-time Disaster Management System
 
----
+This project implements a web-based real-time disaster management system leveraging AI on Edge technologies. It features a 10x10 grid that dynamically displays the locations and survivor counts detected by two drones (D1 and D2), fetching data from a Google Sheet via Google Apps Script. The system updates in real-time, providing an intuitive interface for monitoring disaster response operations without requiring Google Cloud Console or OAuth setup.
 
-### **Notes on the README.md**
-- **Markdown Formatting**: The file uses Markdown syntax for headings (`#`, `##`), lists, code blocks (```), and links. GitHub will render this as a clean, readable webpage.
-- **Structure**: The description includes sections for overview, features, prerequisites, setup instructions, technologies, files, contributing guidelines, license, and acknowledgments, making it comprehensive for users and developers.
-- **Customization**: Replace `YOUR_SCRIPT_ID` in the setup instructions with your actual Google Apps Script URL. You can also customize the license, acknowledgments, or add more sections (e.g., screenshots, demo video) as needed.
-- **Placement**: Save this as `README.md` in your project folder, commit it to Git, and push it to your GitHub repository as described in the previous GitHub repository creation guide.
+## Overview
 
-This `README.md` provides a professional and detailed description of your project, making it easy for others to understand, set up, and contribute to your "AI on Edge Real-time Disaster Management System." Let me know if you want to adjust any section or add more details!
+The application is designed to assist in disaster management by visualizing drone positions and survivor counts on a grid. It integrates seamlessly with a Google Sheet, where data for drone locations (`row`, `col`) and survivor counts (`number of survivor`) are stored and updated dynamically. The grid highlights:
+- **D1 loc** in red (`#ff4500`) for Drone 1.
+- **D2 loc** in purple (`#9370db`) for Drone 2.
+- Survivor counts in white text on red or purple backgrounds, depending on the drone.
+
+The system polls the Google Sheet every 3 seconds to ensure real-time updates, making it ideal for tracking disaster scenarios efficiently.
+
+## Features
+
+- **Dynamic 10x10 Grid**: Displays drone positions and survivor counts in real-time.
+- **Google Sheets Integration**: Fetches data from a Google Sheet with columns `row1`, `col1`, `survivors1` (for Drone 1) and `row2`, `col2`, `survivors2` (for Drone 2) using Google Apps Script.
+- **Responsive Design**: Works seamlessly on mobile, tablet, and desktop devices.
+- **User Interface**: Includes buttons for map, coordinate, and manual/auto mode controls (for demonstration purposes).
+- **Real-time Updates**: Polls the Google Sheet every 3 seconds to reflect changes instantly.
+
+## Prerequisites
+
+Before setting up the project, ensure you have the following:
+
+- A Google Sheet with the following structure (starting from row 2):
